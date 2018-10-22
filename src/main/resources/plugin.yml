@@ -1,5 +1,5 @@
 name: LobbySystem
 author: ahm wir
 version: 0.1
-main: net.revase.lobbysystem.LobbySystem
+main: net.revace.lobbysystem.LobbySystem
 commands:
