@@ -6,7 +6,6 @@ package net.revace.lobbysystem;
 //
 // Datum: 21.10.2018 \\
 
-import net.revace.lobbysystem.commands.SubCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LobbySystem extends JavaPlugin {
