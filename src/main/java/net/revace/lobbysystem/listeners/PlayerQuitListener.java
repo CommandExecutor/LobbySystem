@@ -14,7 +14,6 @@ public class PlayerQuitListener {
 
     @EventHandler
     public void handleQuit(PlayerQuitEvent e){
-
     }
 
 }
