@@ -6,12 +6,9 @@ package net.revace.lobbysystem;
 //
 // Datum: 21.10.2018 \\
 
-import net.revace.lobbysystem.listeners.InventoryClickListener;
-import net.revace.lobbysystem.listeners.PlayerChatListener;
-import net.revace.lobbysystem.listeners.PlayerInteractListener;
-import net.revace.lobbysystem.listeners.PlayerJoinListener;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.PluginManager;
+import net.revace.lobbysystem.commands.LobbyCommand;
+import net.revace.lobbysystem.commands.java.BuildEditCommand;
+import net.revace.lobbysystem.managers.CommandManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LobbySystem extends JavaPlugin {
@@ -19,23 +16,13 @@ public class LobbySystem extends JavaPlugin {
     @Override
     public void onEnable() {
 
+        this.getCommand("lobby").setExecutor(new LobbyCommand());
+        CommandManager.addSubCommand(new BuildEditCommand("build", "(Spieler)", "Versetzt dich in den Baumodus"));
+
     }
 
     @Override
     public void onDisable() {
-
-    }
-
-    private void loadListener(){
-        PluginManager pm = Bukkit.getPluginManager();
-
-        pm.registerEvents(new InventoryClickListener(), this);
-        pm.registerEvents(new PlayerInteractListener(), this);
-        pm.registerEvents(new PlayerChatListener(), this);
-        pm.registerEvents(new PlayerJoinListener(), this);
-
-
-
 
     }
 
