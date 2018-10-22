@@ -16,9 +16,10 @@ public class Data {
     public static class ItemData extends Data {
         private static String compassPrefix = "§aTeleporter §8× §7Rechtsklick";
         private static String profilePrefix = "§bProfil §8× §7Rechtsklick";
-        private static String enterhakenPrefix = "§8● §7Enterhacken *a§8●";
+        private static String enterhakenPrefix = "§8● §7Enterhacken §a§8●";
         private static String hidePlayerPrefix = "§9Spieler Verstecken §8× §7Rechtsklick";
         private static String friendPrefix = "§eFreunde §8× §7Rechtsklick";
+
 
         public static String getCompassPrefix() { return compassPrefix; }
         public static String getProfilePrefix() { return profilePrefix; }
