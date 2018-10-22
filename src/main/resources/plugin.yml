@@ -1,4 +1,5 @@
-name: Penis
-author: Kocks
-version: WasGehtDichDasAn
-main: net.thevace xDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+name: LobbySystem
+author: ahm wir
+version: 0.1
+main: net.revase.lobbysystem.LobbySystem
+commands:

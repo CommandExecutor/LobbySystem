@@ -9,7 +9,7 @@ package net.revace.lobbysystem.utils;
 public class Data {
 
     private static String prefix = "§8│ §a§lRevace §8×§7 ";
-    private static String noPerm = prefix + "§cDu hast keine Rechte.";
+    private static String noPerm = prefix + "Sorry§c,§7aber du darfst das nicht!";
 
     public static String getPrefix() {
         return prefix;
@@ -18,6 +18,7 @@ public class Data {
     public static String getNoPerm() { return noPerm; }
 
     public static class ItemData extends Data {
+
         private static String compassPrefix = "§aTeleporter §8× §7Rechtsklick";
         private static String profilePrefix = "§bProfil §8× §7Rechtsklick";
         private static String enterhakenPrefix = "§8● §7Enterhacken §a§8●";
@@ -33,11 +34,22 @@ public class Data {
     }
 
     public static class InventoryData extends Data {
-        private static String compassTeleporterDisplay = "";
+        private static String compassTeleporterDisplay = "§8» §aTeleporter";
+        private static String signDisplay = "§8» §aRevace.de §8«";
+        private static String knockgameDisplay = "§8× §e§lKnockGame";
+        private static String speedcoredDisplay = "§8× §3§lSpeedCores";
+        private static String smashchestDisplay = "§8× §2§lSmashChest";
+        private static String ffaDisplay = "§8× §9§lFFA";
 
-        public static String getCompassTeleporterDisplay() {
-            return compassTeleporterDisplay;
-        }
+        public static String getCompassTeleporterDisplay() { return compassTeleporterDisplay; }
+        public static String getSignDisplay() { return signDisplay; }
+        public static String getKnockgameDisplay() { return knockgameDisplay; }
+        public static String getSpeedcoredDisplay() { return speedcoredDisplay; }
+        public static String getSmashchestDisplay() { return smashchestDisplay; }
+        public static String getFfaDisplay() { return ffaDisplay; }
+
+
+
     }
 
 }
