@@ -10,9 +10,10 @@ import de.dytanic.cloudnet.api.CloudAPI;
 import de.dytanic.cloudnet.api.player.PermissionProvider;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-public class PlayerChatListener {
+public class PlayerChatListener implements Listener {
 
 
     @EventHandler
@@ -24,7 +25,6 @@ public class PlayerChatListener {
 
         e.setFormat("§8│ " + prefix + "§8● §" + rankColor + " §8➟ §f" + e.getMessage().replace("%", "%%"));
 
-                // Format: §8│ §7Spieler §8● §7Name §8➟ §fMSG
     }
 
 }
