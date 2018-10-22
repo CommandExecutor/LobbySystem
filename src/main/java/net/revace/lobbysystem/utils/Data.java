@@ -45,9 +45,34 @@ public class Data {
 
     public static class InventoryData extends Data {
         private static String compassTeleporterDisplay = "";
+        private static String signDisplay = "";
+        private static String knockGameDisplay = "";
+        private static String speedCoreDisplay = "";
+        private static String smashChestDisplay = "";
+        private static String ffaDisplay = "";
 
         public static String getCompassTeleporterDisplay() {
             return compassTeleporterDisplay;
+        }
+
+        public static String getSignDisplay() {
+            return signDisplay;
+        }
+
+        public static String getKnockGameDisplay() {
+            return knockGameDisplay;
+        }
+
+        public static String getSpeedCoreDisplay() {
+            return speedCoreDisplay;
+        }
+
+        public static String getSmashChestDisplay() {
+            return smashChestDisplay;
+        }
+
+        public static String getFfaDisplay() {
+            return ffaDisplay;
         }
     }
 

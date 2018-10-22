@@ -1,5 +1,6 @@
 package net.revace.lobbysystem.commands.java;
 
+import net.revace.lobbysystem.LobbySystem;
 import net.revace.lobbysystem.commands.SubCommand;
 import net.revace.lobbysystem.utils.Data;
 import org.bukkit.command.CommandSender;
@@ -24,7 +25,8 @@ public class SetGameCommand extends SubCommand {
 
             String game = args[1].toLowerCase();
             if(Data.ValidGames.gameExists(game)) {
-                // Wird gesetzt
+                LobbySystem.getInstance().getConfigManager().setConfigValue("locations." + game, player.getLocation());
+                LobbySystem.getInstance().getConfigManager().saveConfig();
             } else {
                 player.sendMessage(Data.getPrefix() + "§cDas Spiel kann nicht gesetzt werden.");
                 player.sendMessage(Data.getPrefix() + "§eAlle verfügbare Spiele:");
