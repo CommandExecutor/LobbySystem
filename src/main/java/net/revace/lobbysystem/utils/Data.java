@@ -9,9 +9,13 @@ package net.revace.lobbysystem.utils;
 public class Data {
 
     private static String prefix = "§8│ §a§lRevace §8×§7 ";
+    private static String noPerm = prefix + "§cDu hast keine Rechte.";
+
     public static String getPrefix() {
         return prefix;
     }
+
+    public static String getNoPerm() { return noPerm; }
 
     public static class ItemData extends Data {
         private static String compassPrefix = "§aTeleporter §8× §7Rechtsklick";
@@ -25,6 +29,14 @@ public class Data {
         public static String getEnterhakenPrefix() { return enterhakenPrefix; }
         public static String getHidePlayerPrefix() { return hidePlayerPrefix; }
         public static String getFriendPrefix() { return friendPrefix; }
+    }
+
+    public static class InventoryData extends Data {
+        private static String compassTeleporterDisplay = "";
+
+        public static String getCompassTeleporterDisplay() {
+            return compassTeleporterDisplay;
+        }
     }
 
 }
