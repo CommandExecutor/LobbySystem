@@ -31,8 +31,7 @@ public class LobbySystem extends JavaPlugin {
         this.configManager = new ConfigManager();
 
         this.getCommand("lobby").setExecutor(new LobbyCommand());
-        CommandManager.addSubCommand(new BuildEditCommand("build", "(Player)", "Versetzt den Spieler in den Baumodus"));
-        CommandManager.addSubCommand(new GameModeCommand("gm", "<Id> (Player)"));
+        this.getCommand("build").setExecutor(new BuildEditCommand());
         CommandManager.addSubCommand(new SetGameCommand("setgame", "<Game>"));
         CommandManager.addSubCommand(new SetSpawnCommand("setspawn"));
 
