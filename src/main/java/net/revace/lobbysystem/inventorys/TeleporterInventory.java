@@ -51,7 +51,7 @@ public class TeleporterInventory {
         inventory.setItem(35, new ItemBuilder(Material.WOOD_BUTTON, 1, (byte) 7).setDisplayname("").build());
 
         TeleporterTask teleporterTask = new TeleporterTask(player, this.inventory);
-        teleporterTask.runTaskTimerAsynchronously(LobbySystem.getInstance(), 0, 5);
+        teleporterTask.runTaskTimerAsynchronously(LobbySystem.getInstance(), 5, 5);
 
         player.playSound(player.getLocation(), Sound.CHEST_OPEN, 5f, 2f);
     }

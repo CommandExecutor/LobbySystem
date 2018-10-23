@@ -8,6 +8,9 @@ package net.revace.lobbysystem;
 
 import net.revace.lobbysystem.commands.LobbyCommand;
 import net.revace.lobbysystem.commands.java.BuildEditCommand;
+import net.revace.lobbysystem.commands.java.GameModeCommand;
+import net.revace.lobbysystem.commands.java.SetGameCommand;
+import net.revace.lobbysystem.commands.java.SetSpawnCommand;
 import net.revace.lobbysystem.listeners.InventoryClickListener;
 import net.revace.lobbysystem.listeners.PlayerChatListener;
 import net.revace.lobbysystem.listeners.PlayerInteractListener;
@@ -28,6 +31,9 @@ public class LobbySystem extends JavaPlugin {
 
         this.getCommand("lobby").setExecutor(new LobbyCommand());
         CommandManager.addSubCommand(new BuildEditCommand("build", "(Player)", "Versetzt den Spieler in den Baumodus"));
+        CommandManager.addSubCommand(new GameModeCommand("gm", "<Id> (Player)"));
+        CommandManager.addSubCommand(new SetGameCommand("setgame", "<Game>"));
+        CommandManager.addSubCommand(new SetSpawnCommand("setspawn"));
 
     }
 

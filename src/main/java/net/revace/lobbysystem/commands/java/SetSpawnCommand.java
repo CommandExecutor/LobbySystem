@@ -8,8 +8,8 @@ import org.bukkit.entity.Player;
 
 public class SetSpawnCommand extends SubCommand {
 
-    public SetSpawnCommand(String command, String syntax) {
-        super(command, syntax);
+    public SetSpawnCommand(String command) {
+        super(command);
     }
 
     @Override

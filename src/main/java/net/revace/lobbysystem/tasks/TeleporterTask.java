@@ -27,6 +27,7 @@ public class TeleporterTask extends BukkitRunnable {
         if(!player.getInventory().getTitle().equals(Data.InventoryData.getCompassTeleporterDisplay())) {
             cancel();
             running = false;
+            player.playSound(player.getLocation(), Sound.CHEST_CLOSE, 5, 2f);
             return;
         }
 
