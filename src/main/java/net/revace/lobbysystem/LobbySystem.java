@@ -7,8 +7,7 @@ package net.revace.lobbysystem;
 // Datum: 21.10.2018 \\
 
 import net.revace.lobbysystem.commands.LobbyCommand;
-import net.revace.lobbysystem.commands.java.BuildEditCommand;
-import net.revace.lobbysystem.commands.java.GameModeCommand;
+import net.revace.lobbysystem.commands.BuildEditCommand;
 import net.revace.lobbysystem.commands.java.SetGameCommand;
 import net.revace.lobbysystem.commands.java.SetSpawnCommand;
 import net.revace.lobbysystem.listeners.InventoryClickListener;
@@ -28,6 +27,8 @@ public class LobbySystem extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+        this.configManager = new ConfigManager();
 
         this.getCommand("lobby").setExecutor(new LobbyCommand());
         CommandManager.addSubCommand(new BuildEditCommand("build", "(Player)", "Versetzt den Spieler in den Baumodus"));

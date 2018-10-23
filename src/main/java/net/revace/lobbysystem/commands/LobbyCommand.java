@@ -31,7 +31,7 @@ public class LobbyCommand implements CommandExecutor {
             player.sendMessage("");
         } else if(args.length > 0) {
             if(!CommandManager.getSubCommands().stream()
-                    .anyMatch(subCommand -> args[args.length-1].equalsIgnoreCase(subCommand.getCommand()))) {
+                    .anyMatch(subCommand -> args[0].equalsIgnoreCase(subCommand.getCommand()))) {
                 player.sendMessage(Data.getCommandNotFound());
                 player.playSound(player.getLocation(), Sound.NOTE_SNARE_DRUM, 5f, 0.135f);
                 return true;
